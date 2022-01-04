@@ -64,3 +64,5 @@ const miguelito = new Student2({
     name: "Miguel", 
     age: 15,
     cursosAprobados: ["Curso de Responsive Design"]})
+
+    
