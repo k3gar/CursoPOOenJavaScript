@@ -1,4 +1,35 @@
-//Encapsulación usando Getters and Setters
+function videoPlay(id){
+    const urlSecreta = "https://secreto.com/" + id
+    console.log('S está reproduciendo desde ' + urlSecreta)
+}
+function videoStop(id){
+    const urlSecreta = "https://secreto.com/" + id
+    console.log('Se pausó ' + urlSecreta)
+}
+function ejemplo(){
+    console.log("AHHHHHHHHHHHHHHHH .... Ejemplo")
+}
+
+export class PlatziClass {
+    constructor({
+        name, videoID, 
+    }){
+        this.name = name;
+        this.videoID = videoID;
+    }
+    reproducir(){
+        videoPlay(this.videoID)
+    }
+    pausar() {
+        videoStop(this.videoID)
+    }
+    ejemplo(){
+        ejemplo()
+    }
+}
+
+
+
 class Course {
     constructor({
         name,
@@ -16,10 +47,6 @@ class Course {
         return `El nombre del curso es "${this._name}"`;
     }
 
-    //Cambiando el nombre a través de un método
-    /* changeName(nuevoNombrecito){
-        this._name = nuevoNombrecito
-    } */
     set name(nuevoNombrecito){
         if(nuevoNombrecito === "Curso Malito de Programación Básica"){
             console.warn('Web... No')
@@ -40,13 +67,6 @@ const course2 = new Course({
     clases: 23,
     teacher: 'Sílvia Ariza Sentís'
 })
-
-course1.name;
-//'Curso Básico de Programación Orientada a Objetos con JavaScript'
-//Cambio como método 👇
-//course1.changeName('Camio de nombre de cursos');
-
-//Para hacer la asignación con el set, solo lo realizamos con el símbolo de asignación "="
 
 
 class RutaAprendizaje{
